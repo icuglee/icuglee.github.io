@@ -28,13 +28,14 @@ body {
   overscroll-behavior: none;
 }
 
+/* 1番上にある余白 */
 .top {
   height: 45px;
   background-color: rgb(37, 37, 37);
 }
 
-/* 上側：透明（＝背景①が見える） */
-.section2 {
+/* 透明（＝背景①が見える）+ 文字 */
+.caption {
   padding-top: 10vh;
   padding-right: 10vh;
   padding-left: 10vh;
