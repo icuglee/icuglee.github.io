@@ -8,8 +8,27 @@ body {
   margin: 0;
 }
 
- /* 背景① 固定で最初に見える*/
- .bg_chapel {
+header {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgb(238, 238, 238);
+  z-index: 1000;
+}
+
+.icon_wrapper {
+  margin-top: 20px;
+  margin-left: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* 背景① 固定で最初に見える*/
+.bg_chapel {
   position: fixed;
   top: 0;
   left: 0;
@@ -21,16 +40,16 @@ body {
   background-repeat: no-repeat;
 
   z-index: -1;
- }
+}
  
- /* スクロールする中身 */
-.content {
+/* スクロールする中身 */
+.main_content {
   position: relative;
   overscroll-behavior: none;
 }
 
 /* 1番上にある余白 */
-.top {
+.blank_top {
   height: 45px;
   background-color: rgb(37, 37, 37);
 }
@@ -38,23 +57,26 @@ body {
 /* 透明（＝背景①が見える）+ 文字 */
 .caption {
   padding: 7vh;
-  color: rgb(218, 218, 218);
-  font-family: "Roboto", sans-serif;
+  padding-bottom: 14vh;
+  color: rgb(238, 238, 238);
+  font-family: "Roboto",sans-serif;
   font-size: 10rem;
   font-weight: 100;
   text-align: right;
+  line-height: 1;
 
-  line-height: 1.1;
+  min-height: 80vh;
 }
 
-@media (max-width: 768px) {
+/* widthが676px以下ならcaptionのfontを調整 */
+@media (max-width: 676px) {
   .caption {
-    font-size: 6rem;
+    font-size: 6.5rem;
   }
 }
 
 /* 中間 black box */
-.section3 {
+.blank_mid {
   height: 50vh;
   background-color: rgb(37, 37, 37);
 }
@@ -72,4 +94,9 @@ body {
 .wrapper {
   height:100%;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.icon {
+  height: 100%;
+  width: auto;
 }
