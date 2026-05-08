@@ -1,0 +1,82 @@
+<html>
+  <section class="hero">
+
+    <div class="fixed-bg"></div>
+
+    <div class="parallax-bg"></div>
+
+    <div class="content">
+      <h1>ICU Glee Club</h1>
+    </div>
+
+  </section>
+</html>
+
+<style>
+  body {
+    margin: 0;
+  }
+
+  .hero {
+    position: relative;
+
+    height: 300vh;;
+
+    overflow: hidden;
+  }
+
+  .fixed-bg {
+    position: fixed;
+    inset: 0;
+
+    background-image: url("assets/images/chapel.avif");
+    background-size: cover;
+    background-position: center;
+
+    z-index: -1;
+  }
+
+  .parallax-bg {
+    position: absolute;
+
+    inset: 0;
+
+    transform: translateY(900px);
+
+    height: 1500px;
+
+    background-image: url("assets/images/kassouro.jpg");
+    background-size: cover;
+    background-position: center;
+
+    z-index: 0;
+  }
+  
+    
+  .content {
+    position: relative;
+
+    z-index: 1;
+
+    color: white;
+
+    padding-top: 40vh;
+
+    text-align: center;
+  }
+</style>
+
+<script>
+
+  const parallaxBg =
+    document.querySelector(".parallax-bg");
+
+    window.addEventListener("scroll", () => {
+
+    const scrollY = window.scrollY;
+
+    parallaxBg.style.transform =
+      `translateY(${scrollY * 0.5 + 900}px)`;
+
+  });
+</script>
