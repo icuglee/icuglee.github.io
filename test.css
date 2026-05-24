@@ -152,12 +152,12 @@ header {
   position: relative;
   overflow: hidden;
   min-height: 10vh;
-  background-color: rgba(37, 37, 37, 0.4);
+  background-color: rgba(37, 37, 37, 0.5);
 }
 
 .parallax_bg {
   position: absolute;
-  top: -15%;
+  top: -30%;
   left: 0;
   width: 110%;
   height: 110%;
@@ -189,7 +189,5 @@ header {
   padding: 50px;
 }
 
-.twitter-timeline {
-  font-size: 1rem;
-}
+
 
