@@ -104,8 +104,6 @@ header {
   font-weight: 100;
   text-align: right;
   line-height: 1;
-
-  /*min-height: 80vh;*/
 }
 
 /* widthが688px以下ならwindowのfontを調整 */
@@ -145,6 +143,7 @@ header {
   }
 }
 
+/* social media */
 .parallax_window {
   position: relative;
   overflow: hidden;
@@ -206,7 +205,6 @@ header {
 }
 
 
-
 .social_media_overlay {
   position: absolute;
   top: 0;
@@ -215,4 +213,60 @@ header {
   height: 100%;
   background-color: rgba(37, 37, 37, 0.2);
   pointer-events: none;
+}
+
+/* schedule */
+.schedule {
+  background-color: rgb(37, 37, 37);
+  padding: 70px 35px;
+  color: rgb(238, 238, 238);
+}
+
+.score_outer {
+  margin: 0 50px;
+  min-width: 500px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+}
+
+.score_wrapper {
+  position:relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0px;
+
+  width: max-content;
+  
+}
+
+.score_header {
+  position:relative;
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(190, 190, 190);
+  scroll-snap-align: start;
+}
+
+.measure {
+  position:relative;
+  flex-shrink: 0;
+  width: 400px;
+  height: 100px;
+  background-color: rgb(0, 190, 190);
+
+  scroll-snap-align: start;
+}
+
+.measure1 {
+  position:relative;
+  flex-shrink: 0;
+  width: 400px;
+  height: 100px;
+  background-color: rgb(190, 0, 190);
+
+  scroll-snap-align: start;
 }
