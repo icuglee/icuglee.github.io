@@ -1,6 +1,7 @@
 const parallax_bg = document.querySelector(".parallax_bg");
-const menu_outer = document.querySelector(".menu_outer");
-const menu_inner = document.querySelector(".menu_inner");
+const menu = document.querySelector(".menu");
+const menu_bg = document.querySelector(".menu_bg");
+const menu_button = document.querySelector(".menu_button");
 
 window.addEventListener("scroll", () => {
   // Parallax effect for background
@@ -11,13 +12,12 @@ window.addEventListener("scroll", () => {
 
   // Fix menu after scrolling down
   if (window.scrollY > 45) {
-    menu_outer.classList.add("fix");
-    menu_inner.classList.add("fix");
+    menu.classList.add("fix");
   } else {
-    menu_outer.classList.remove("fix");
-    menu_inner.classList.remove("fix");
+    menu.classList.remove("fix");
   }
 });
 
-
-
+menu_button.addEventListener("click", () => {
+  menu_bg.classList.toggle("pressed");
+});

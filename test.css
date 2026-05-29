@@ -18,33 +18,73 @@ header {
   z-index: 1000;
 }
 
-.menu_outer {
+.menu {
   position: absolute;
   top: 55px;
   left: 10px;
-  width: auto;
-  height: 45px;
 }
 
-.menu_outer.fix {
+.menu.fix {
   position: fixed;
   top: 10px;
   left: 10px;
 }
 
-.menu_inner {
-  position: absolute;
-  top: 55px;
-  left: 10px;
-  width: auto;
-  height: 45px;
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
 }
 
-.menu_inner.fix {
-  position: fixed;
-  top: 10px;
-  left: 10px;
+.menu_bg {
+  position:absolute;
+  width: 50px;
+  height: 45px;
+  background-color: rgb(238, 238, 238);
+  border-radius: 10px;
+  min-width: 0px;
+  min-height: 0px;
+  transition: all 1s;
 }
+
+.menu_bg::after {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0,0,0,0.3);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.4s;
+  z-index: -1;
+}
+
+.menu_bg.pressed {
+  width: 30vw;
+  min-width: 200px;
+  height: 300px;
+  min-height: 300px;
+}
+
+.menu_bg.pressed::after {
+  opacity: 1;
+}
+
+.menu_button {
+  position:absolute;
+  width: 50px;
+  height: 45px;
+  border-radius: 10px;
+}
+
+
+
+
+
 
 /* footer */
 footer {
@@ -144,6 +184,8 @@ footer {
   font-weight: 100;
   text-align: right;
   line-height: 1;
+
+  pointer-events: none;
 }
 
 /* widthが688px以下ならwindowのfontを調整 */
@@ -232,6 +274,8 @@ footer {
 .social_media_button {
   position: relative;
   width: fit-content;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .social_media_button a {
