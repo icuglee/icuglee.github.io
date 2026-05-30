@@ -93,13 +93,9 @@ header {
   bottom: -2px;
   left: -2px;
   height: 2px;
-  width: 0px;
+  width: 100%;
   background-color: rgb(37, 37, 37);
   transition: width .3s;
-}
-
-.menu_item:hover::after {
-  width: 60px;
 }
 
 .menu_item a {
