@@ -21,13 +21,13 @@
     - schedule
       - 各月イベント
 
-scheduleは楽譜形式でwrapperは横向きflex
 
-小節はscrol snap
-
-grid 
-
-楽譜はicu song イベントが割り振られた音符は跳ねさせる。
+- Hero
+- About
+- Follow us on
+- Annual Schedule
+- Access
+- Contact
 
 
 - 4月
