@@ -2,6 +2,7 @@ const parallax_bg = document.querySelector(".parallax_bg");
 const menu = document.querySelector(".menu");
 const menu_bg = document.querySelector(".menu_bg");
 const menu_button = document.querySelector(".menu_button");
+const menu_overlay = document. querySelector(".menu_overlay");
 
 window.addEventListener("scroll", () => {
   // Parallax effect for background
@@ -20,4 +21,15 @@ window.addEventListener("scroll", () => {
 
 menu_button.addEventListener("click", () => {
   menu_bg.classList.toggle("pressed");
+  menu_overlay.classList.toggle("show");
 });
+
+menu_overlay.addEventListener("click", () => {
+  menu_bg.classList.toggle("pressed");
+  menu_overlay.classList.toggle("show");
+});
+
+
+
+
+
