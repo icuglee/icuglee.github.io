@@ -3,6 +3,8 @@ const menu = document.querySelector(".menu");
 const menu_bg = document.querySelector(".menu_bg");
 const menu_button = document.querySelector(".menu_button");
 const menu_overlay = document. querySelector(".menu_overlay");
+const menu_items = document.querySelectorAll(".menu_item");
+
 
 window.addEventListener("scroll", () => {
   // Parallax effect for background
@@ -22,11 +24,29 @@ window.addEventListener("scroll", () => {
 menu_button.addEventListener("click", () => {
   menu_bg.classList.toggle("pressed");
   menu_overlay.classList.toggle("show");
+  menu_items.forEach(item => item.classList.toggle("show"));
+  if (menu_button.classList.contains("pressed")) {
+    menu_button.classList.remove("pressed");
+    menu_button.classList.add("closed");
+
+  } else {
+    menu_button.classList.remove("closed");
+    menu_button.classList.add("pressed");
+  }
 });
 
 menu_overlay.addEventListener("click", () => {
   menu_bg.classList.toggle("pressed");
   menu_overlay.classList.toggle("show");
+  menu_items.forEach(item => item.classList.toggle("show"));
+  if (menu_button.classList.contains("pressed")) {
+    menu_button.classList.remove("pressed");
+    menu_button.classList.add("closed");
+
+  } else {
+    menu_button.classList.remove("closed");
+    menu_button.classList.add("pressed");
+  }
 });
 
 
