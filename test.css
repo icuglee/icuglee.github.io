@@ -48,30 +48,11 @@ header {
   transition: all 1s;
 }
 
-.menu_bg::after {
-  content: "";
-
-  position: fixed;
-  inset: 0;
-
-  background: rgba(0,0,0,0.3);
-
-  opacity: 0;
-  pointer-events: none;
-
-  transition: opacity 0.4s;
-  z-index: -1;
-}
-
 .menu_bg.pressed {
   width: 30vw;
   min-width: 200px;
   height: 300px;
   min-height: 300px;
-}
-
-.menu_bg.pressed::after {
-  opacity: 1;
 }
 
 .menu_button {
@@ -81,8 +62,22 @@ header {
   border-radius: 10px;
 }
 
+.menu_overlay {
+  position: fixed;
+  inset: 0;
+  
+  pointer-events: none;
+  
+  background: rgba(0,0,0,0.3);
+  opacity: 0;
+  
+  transition: 1s;
+}
 
-
+.menu_overlay.show {
+  opacity: 1; 
+  pointer-events: auto;
+}
 
 
 
