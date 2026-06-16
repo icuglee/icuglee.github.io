@@ -86,7 +86,7 @@ const schedules = [
   },
   {
     month: "11月",
-    events: ["近隣協会での奉唱"]
+    events: ["近隣教会での奉唱"]
   },
   {
     month: "12月",
