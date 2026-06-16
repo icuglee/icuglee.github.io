@@ -84,7 +84,7 @@ header {
   color: rgb(37, 37, 37);
   font-size: 2rem;
   z-index: 1000;  
-  pointer-events: auto;
+  pointer-events: none;
   transition: opacity 0.3s 0s;
 }
 
@@ -94,11 +94,13 @@ header {
   color: inherit;
   text-decoration: none;
   z-index: 1000;
+
 }
 
 .menu_item.show {
   opacity: 1;
   transition: opacity 0.3s 0.7s;
+  pointer-events: auto;
 }
 
 .menu_button {
