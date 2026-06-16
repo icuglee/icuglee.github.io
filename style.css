@@ -340,6 +340,13 @@ footer {
   }
 }
 
+@media (max-width: 415px) {
+  .window {
+    font-size: 5.5rem;
+    padding-top:15vw
+  }
+}
+
 
 .black_margin {
   position: relative;
@@ -571,10 +578,10 @@ footer {
 }
 
 .contact_row {
-  margin: 0 10vw;
   display: grid;
-  grid-template-columns: 170px 20px 1fr;
+  grid-template-columns: auto auto 1fr;
   align-items: center;
+  column-gap: 10px;
 }
 
 .contact_row a{
@@ -587,7 +594,7 @@ footer {
 
 .label {
   text-align: left;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 .separator {
